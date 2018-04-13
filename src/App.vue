@@ -1,23 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <div id="page-wrapper">
+      <site-header/>
+      <top-nav/>
+      <router-view id="main-content"/>
+      <site-footer/>
+    </div>
   </div>
 </template>
 
 <script>
+import SiteHeader from '@/components/site-header';
+import TopNav from '@/components/top-nav';
+import SiteFooter from '@/components/site-footer';
+
 export default {
   name: 'App',
+  components: {
+    SiteHeader,
+    TopNav,
+    SiteFooter,
+  },
 };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
