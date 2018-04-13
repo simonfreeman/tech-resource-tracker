@@ -8,7 +8,6 @@ export default {
 };
 </script>
 
-
  <style lang="less">
  @import "./GlobalStyleSettings.less";
 </style>
