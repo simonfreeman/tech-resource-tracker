@@ -12,5 +12,11 @@ export default {
 
 
 <style lang="less">
- @import "./GlobalStyleSettings.less";
+  @import "../styles/global-style-settings.less";
+
+  #top-nav{
+    grid-area: topNav;
+    background-color:green;
+  }
+
 </style>

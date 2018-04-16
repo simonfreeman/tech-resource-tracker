@@ -12,5 +12,13 @@ export default {
 
 
 <style lang="less">
- @import "./GlobalStyleSettings.less";
+  @import "../styles/global-style-settings.less";
+
+ #footer{
+  grid-area:footer;
+  background-color:yellow;
+  font-size: @footerHeight / 2 ;
+  text-align:center;
+  padding-top:@footerHeight / 4;
+}
 </style>

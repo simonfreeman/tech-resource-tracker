@@ -12,5 +12,17 @@ export default {
 
 
  <style lang="less">
- @import "./GlobalStyleSettings.less";
+  @import "../styles/global-style-settings.less";
+
+ #header{
+    grid-area: header;
+    background-color:red;
+  }
+
+  #site-name{
+      font-size: @headerHeight / 2 ;
+      text-align:center;
+      padding-top:@headerHeight / 4;
+  }
+
 </style>

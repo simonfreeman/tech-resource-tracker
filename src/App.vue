@@ -24,3 +24,8 @@ export default {
 };
 </script>
 
+<style lang="less">
+  @import "./styles/global-style-settings.less";
+  @import "./styles/reset.css";
+  @import "./styles/global-styles.less";
+</style>

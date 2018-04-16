@@ -1,0 +1,32 @@
+#page-wrapper{
+	display: grid;
+	grid-template-rows: @headerHeight @menuHeight auto @footerHeight;
+	grid-template-areas: 
+		"header"
+		"topNav"
+		"mainContent"
+		"footer";
+	height: 100vh;
+	width: 100vw;
+}
+
+#main-content{
+	grid-area: mainContent;
+	background-color:blue;
+}
+
+
+
+// ** End Main Layout Components ** //
+
+// ** Generic Tags ** //
+body{
+	color:white;
+	background-color:black;
+}
+
+p{
+	
+}
+
+// ** End Generic Tags ** //
