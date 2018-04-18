@@ -1,32 +1,53 @@
 <template>
-    <component v-bind:is="currentViewComponent.component">fff</component>
+  <section id="feeds-section">
+    <component v-bind:is="currentViewComponent.component"/>
+  </section>
 </template>
 
 <script>
-import ViewAllSources from '@/components/view-all-sources';
+import ViewAllFeeds from '@/components/view-all-feeds';
 
-const fakeSources = [
+const feeds = [
   {
-    name: 'uncanny county',
-    url: 'https://audioboom.com/channels/4741997.rss',
+    id: 1,
+    feedName: 'uncanny county',
+    feedUrl: 'https://audioboom.com/channels/4741997.rss',
+    unseen: 5,
+    latestDate: new Date(2018, 2, 22, 22, 22, 22, 12),
+    latestName: 'Thing',
+    feedImageUrl: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
   },
   {
-    name: 'uncanny county',
-    url: 'https://rss.acast.com/thetipoff',
+    id: 2,
+    feedName: 'uncannydadddaaaada',
+    feedUrl: 'https://rss.acast.com/thetipoff',
+    unseen: 3,
+    latestDate: new Date(2018, 1, 11, 11, 11, 11, 11),
+    latestName: 'OtherThing',
+    feedImageUrl: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
+  },
+  {
+    id: 3,
+    feedName: 'fffffffffff',
+    feedUrl: 'https://rss.acast.com/thetipoff',
+    unseen: 2,
+    latestDate: new Date(2018, 1, 11, 11, 11, 11, 11),
+    latestName: 'OtherThingthesecsefsdf',
+    feedImageUrl: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
   },
 ];
 
-const sourceViewComponents = [
+const feedViewComponents = [
   {
     name: 'viewAll',
     component: {
-      template: '<view-all-sources :sources="fakeSources" />',
+      template: '<view-all-feeds :feeds="feeds" />',
       components: {
-        ViewAllSources,
+        ViewAllFeeds,
       },
       data() {
         return {
-          fakeSources,
+          feeds,
         };
       },
     },
@@ -38,8 +59,8 @@ export default {
   name: 'intial-view',
   data() {
     return {
-      sourceViewComponents,
-      currentViewComponent: sourceViewComponents[0],
+      feedViewComponents,
+      currentViewComponent: feedViewComponents[0],
     };
   },
 };
@@ -47,4 +68,7 @@ export default {
 
 <style lang="less">
   @import "../styles/global-style-settings.less";
+  #feeds-section{
+    display:flex;
+  }
 </style>
