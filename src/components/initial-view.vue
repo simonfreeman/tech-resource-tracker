@@ -1,5 +1,5 @@
 <template>
-  <section id="feeds-section">
+  <section>
     <component v-bind:is="currentViewComponent.component"/>
   </section>
 </template>
@@ -9,31 +9,34 @@ import ViewAllFeeds from '@/components/view-all-feeds';
 
 const feeds = [
   {
-    id: 1,
-    feedName: 'uncanny county',
+    feedId: 1,
+    feedName: 'Uncanny County',
     feedUrl: 'https://audioboom.com/channels/4741997.rss',
     unseen: 5,
     latestDate: new Date(2018, 2, 22, 22, 22, 22, 12),
-    latestName: 'Thing',
+    latestName: 'Wish You Were Here (S2, Ep6)',
     feedImageUrl: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
+    feedType: 'podcast',
   },
   {
-    id: 2,
-    feedName: 'uncannydadddaaaada',
-    feedUrl: 'https://rss.acast.com/thetipoff',
+    feedId: 2,
+    feedName: 'CodeBurst',
+    feedUrl: 'https://audioboom.com/channels/4741997.rss',
     unseen: 3,
     latestDate: new Date(2018, 1, 11, 11, 11, 11, 11),
-    latestName: 'OtherThing',
+    latestName: 'A Simple Guide to ES6 Iterators in JavaScript with Examples',
     feedImageUrl: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
+    feedType: 'blog',
   },
   {
-    id: 3,
-    feedName: 'fffffffffff',
+    feedId: 3,
+    feedName: 'The Tip Off',
     feedUrl: 'https://rss.acast.com/thetipoff',
     unseen: 2,
     latestDate: new Date(2018, 1, 11, 11, 11, 11, 11),
-    latestName: 'OtherThingthesecsefsdf',
+    latestName: 'Ep.17 Two sides to the story',
     feedImageUrl: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
+    feedType: 'podcast',
   },
 ];
 
@@ -68,7 +71,4 @@ export default {
 
 <style lang="less">
   @import "../styles/global-style-settings.less";
-  #feeds-section{
-    display:flex;
-  }
 </style>

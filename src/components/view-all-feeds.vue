@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <basic-feed-item v-for="feed in feeds" v-bind:key="feed.id" v-bind="feed" />
+  <div class="feeds-section">
+      <basic-feed-item v-for="feed in feeds" v-bind:key="feed.feedId" v-bind="feed" />
   </div>
 </template>
 
@@ -26,4 +26,7 @@ export default {
 <style lang="less">
   @import "../styles/global-style-settings.less";
 
+ .feeds-section{
+    display:flex;
+  }
 </style>
