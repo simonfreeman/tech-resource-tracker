@@ -10,14 +10,25 @@ import BasicFeedItem from '@/components/basic-feed-item';
 
 export default {
   name: 'view-all-feeds',
-  props: {
-    feeds: {
-      type: Array,
-      required: true,
-    },
-  },
   components: {
     BasicFeedItem,
+  },
+  mounted() {
+    this.populateFeedLost();
+  },
+  methods: {
+    populateFeedLost() {
+      fetch('https://localhost:5001/api/feeds')
+        .then(response => response.json())
+        .then((data) => {
+          this.feeds = data;
+        });
+    },
+  },
+  data() {
+    return {
+      feeds: [],
+    };
   },
 };
 </script>
